@@ -1,0 +1,313 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+      padding: 0;
+      margin: 0;
+}
+
+a {
+      text-decoration: none;
+      display: block;
+}
+
+table {
+      border-spacing: 0;
+}
+
+fieldset,
+img {
+      border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+      font-weight: normal;
+      font-style: normal;
+}
+
+strong {
+      font-weight: bold;
+}
+
+ol,
+ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+}
+
+caption,
+th {
+      text-align: left;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+      font-weight: normal;
+      font-size: 100%;
+      margin: 0;
+      padding: 0;
+      color: #444;
+}
+
+q:before,
+q:after {
+      content: '';
+}
+
+abbr,
+acronym {
+      border: 0;
+}
+/*index.css*/
+.section {
+      text-align: center;
+      overflow: hidden;
+}
+
+#myVideo {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-color: black;
+      /* in case the video doesn't fit the whole page*/
+      background-position: center center;
+      background-size: contain;
+      object-fit: cover;
+      /*cover video background */
+      z-index: 3;
+}
+
+#section0 .layer {
+      position: absolute;
+      z-index: 4;
+      width: 100%;
+      left: 0;
+      top: 43%;
+}
+
+#section0 {
+      overflow: hidden;
+}
+.section .img-box img{
+      display: block;
+      width: 100%;
+      height: 100%;
+}
+.img-box a{
+      display: block;
+}
+.img-link{
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+}
+.img-link li{
+      width: 33.33333%;
+      height: 100%;
+
+}
+.img-link a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      
+}
+@keyframes breath{
+      0% {
+            transform: scale(1);
+      }
+    
+      50% {
+            transform: scale(1.2);
+      }
+     
+      100% {
+            transform: scale(1);
+      }
+
+     
+}
+.nextPage{
+      /* width: 40px;
+      height: 40px; */
+      position: absolute;
+      bottom: 50px;
+      right: 100px;
+     
+      overflow: hidden;
+      /* animation: breath 2s infinite; */
+      z-index: 100;
+}
+.nextPage1{
+       width: 40px;
+      height: 40px;
+       position: absolute;
+       bottom: 50px;
+       left: 50%;
+       border-radius:100%;
+       background-color: rgba(255, 255, 255, 0.6);
+        animation: breath 2s infinite;
+       cursor: pointer;
+        z-index: 300;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6)
+}
+.nextPage1 a{
+      padding: 5px;
+}
+.nextPage1 img{
+      display: block;
+      width:100%;
+       transform: rotate(90deg);
+}
+.nextPage a{
+      display: block;
+}
+.nextPage a img{
+      width: 40px;
+      height: 40px;
+      display: block;
+      
+      transform: rotate(270deg)
+}
+.img-box{
+          height: 100%;
+          top: 0;
+          position: absolute;
+          left: 0;
+          width: 100%;
+}
+.bl-box img{
+      display: block;
+      width: 100%;
+      height: 100%;
+}
+.accordion{
+      width:100%;
+      height:100%;
+      position: relative;
+      overflow: hidden;
+}
+/*11*/
+.accordion li{
+      width: 100%;
+      height:100%;
+      position: absolute;
+      top:0;
+      transition: 0.4s;
+      cursor: pointer;
+}
+.accordion li img{
+      width: 100%;
+      height: 100%;
+      display:block;
+}
+.accordion li:nth-child(1){
+      left: 0;
+      z-index: 100;
+}
+.accordion li:nth-child(2){
+      left: 33.333333333%;
+      z-index: 200;
+}
+.accordion li:nth-child(3) {
+      left: 66.666666666%;
+       z-index: 300;
+}
+.pushLeft0{
+      transform: translateX(-1300px)
+}
+.pushRight0{
+     
+      transform: translateX(1300px)
+}
+#accordion .left0 {
+      left: 0;
+}
+.fireWorks{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -382px;
+      z-index: 300;
+}
+.fireWorks img{
+      display: block;
+}
+.animmation-center{
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      padding-top: 200px;
+      height: 100%;
+}
+.animmation-center div {
+       position: absolute;
+       top: -100px;
+       opacity: 0;
+       
+}
+.animmation-center .animation1{
+      left: 100px;
+}
+.animmation-center .animation2 {
+      left: 400px;
+}
+.animmation-center .animation3 {
+      left: 690px;
+}
+.animmation-center .animation4{
+      position: absolute;
+      right: -105px;
+      bottom: 60px;
+      cursor: pointer;
+}
+.animation1 img{
+      display: block;
+      width: 100%
+}
+.wrapper a{
+      width: 100%;
+      height: 100%;
+} 
