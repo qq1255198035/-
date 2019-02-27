@@ -237,6 +237,8 @@ acronym {
       transition: 0.4s;
       cursor: pointer;
 }
+
+
 .accordion li img{
       width: 100%;
       height: 100%;
@@ -282,11 +284,21 @@ acronym {
       padding-top: 200px;
       height: 100%;
 }
-.animmation-center div {
+.animmation-center > div {
        position: absolute;
-       top: -100px;
-       opacity: 0;
+       /* top: -100px; */
        
+       top: 250px;
+       
+}
+.animmation-center .shade{
+      width: 80%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #f4f3f1;
+      margin-left: 10%;
 }
 .animmation-center .animation1{
       left: 100px;
@@ -295,7 +307,7 @@ acronym {
       left: 400px;
 }
 .animmation-center .animation3 {
-      left: 690px;
+      left: 700px;
 }
 .animmation-center .animation4{
       position: absolute;
@@ -311,3 +323,12 @@ acronym {
       width: 100%;
       height: 100%;
 } 
+.owl-btn{
+      position: absolute;
+      right: 220px;
+      top: 150px;
+      animation-duration: 3s;
+      animation-delay: 1s;
+      
+
+}

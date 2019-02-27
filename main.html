@@ -6,14 +6,9 @@
       <title>动画</title>
       <link rel="stylesheet" type="text/css" href="./lib/fullPage/jquery.fullPage.css" />
       <link rel="stylesheet" href="./css/component.css">
-      <link rel="stylesheet" href="./lib/wow/animate.min.css">
       <link rel="stylesheet" href="./css/demo.css">
+      <link rel="stylesheet" href="./css/animate.min.css">
       <link rel="stylesheet" href="./css/main.css">
-      <!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
 </head>
 <body>
       <div id="fullpage" class="perspective effect-moveleft">
@@ -41,10 +36,8 @@
                   <div id="perspective1" class="perspective effect-moveleft">
 			      <div class="container">
 			      	<div class="wrapper">
-			      		<div class="img-box">
-                                        
-                                                <img src="./img/bg1.png" alt="">
-                                         
+			      		<div class="img-box">    
+                                          <img src="./img/bg1.png" alt="">           
                                     </div>
 			      	</div><!-- wrapper -->
 			      </div><!-- /container -->
@@ -52,8 +45,7 @@
 			      	 <a href="#page1" class="icon-home">第一屏</a>
                               <a href="#page2" class="icon-news">第二屏</a>
                               <a href="#page3" class="icon-image">第三屏</a>
-                              <a href="#page4" class="icon-upload">第四屏</a>
-                             
+                              <a href="#page4" class="icon-upload">第四屏</a>            
                         </nav>
                         <div class="nextPage">
                               <button id="showMenu1"><img src="./img/menu.png" alt=""></button>
@@ -68,9 +60,17 @@
 			      <div class="container">
 			      	<div class="wrapper"> 
                                     <ul class="accordion" id="accordion">
-                                          <li><img src="./img/bg3.png"></li>
-                                          <li><img src="./img/bg4.png"></li>
-                                          <li><img src="./img/bg5.png"></li>
+                                          <li><img src="./img/bg01.png"></li>
+                                          <li><img src="./img/bg02.png"></li>
+                                          <li>
+                                                <img src="./img/bg03.png">
+                                                <span class="owl-btn">
+                                                      
+                                                            <img src="./img/car.png" alt="">
+                                                      
+                                                      
+                                                </span>
+                                          </li>
                                           <div class="fireWorks"><img src="./img/fireWorks.png" alt=""></div>
                                           <div class="nextPage1">
                                                 <a href="#page4"><img src="./img/nextPage.png" alt=""></a>
@@ -102,12 +102,15 @@
                                     <div class="animmation-center">           
                                           <div class="animation1">
                                                 <img src="./img/1.png" alt="">
+                                                <div class="shade"></div>
                                           </div>
                                           <div class="animation2">
                                                 <img src="./img/2.png" alt="">
+                                                <div class="shade"></div>
                                           </div>
                                           <div class="animation3">
                                                 <img src="./img/3.png" alt="">
+                                                <div class="shade"></div>
                                           </div>
                                           <span class="animation4">
                                                 <a href="#page5">
@@ -135,10 +138,9 @@
 			      	<div class="wrapper">
 			      		 <div class="img-box animation-img-box">           
                                           <img src="./img/bg8.png" alt="">
-                                    </div>
-                                    
-			      	</div><!-- wrapper -->
-			      </div><!-- /container -->
+                                    </div>        
+			      	</div>
+			      </div>
 			      <nav class="outer-nav right vertical">
 			      	 <a href="#page1" class="icon-home">第一屏</a>
                               <a href="#page2" class="icon-news">第二屏</a>
@@ -155,21 +157,22 @@
       <script src="./js/jquery.min.js"></script>
       <script src="./lib/fullPage/jquery-ui.min.js"></script>
       <script type="text/javascript" src="./lib/fullPage/jquery.fullPage.js"></script>
-      <script src="./js/modernizr.custom.js"></script>
-      <script src="./js/boxlayout.js"></script>
       <script src="js/modernizr.custom.25376.js"></script>
       <script src="js/classie.js"></script>
       <script src="js/menu.js"></script>
-      <script src="./lib/wow/wow.min.js"></script>
       <script type="text/javascript">
             $(document).ready(function () {
-                  $(".animmation-center").fadeOut()
-                  $(".animation4").fadeOut()
-                  $("body").dblclick(function(){
-                        fullScreen()
+                  var timer;
+                  $(".owl-btn").click(function(e){
+                        e.stopPropagation();
+                        $.fn.fullpage.moveSectionDown();
                   })
+                  $(".animmation-center").fadeOut();
+                  $(".animation4").fadeOut();
+                  $("body").dblclick(function(){
+                        fullScreen();
+                  });
                   $(".fireWorks").fadeOut();
-                  Boxlayout.init();
                   $('#fullpage').fullpage({
                         verticalCentered: true,
                         anchors: ['page1', 'page2', 'page3', 'page4','page5'],
@@ -177,95 +180,75 @@
                         continuousVertical: true,
                         afterLoad: function (anchorLink, index) {
                               if(index == 1){
-                                    // clearTimeout(timer)
-                                    // var timer = setTimeout(function(){
-                                    //       $.fn.fullpage.moveSectionDown();
-                                    // }, 28000);
-                              }else if(index == 4){
-                                    $(".animation-img-box").fadeOut(1000)
-                                     $(".animmation-center").fadeIn(1500,function(){
-                                           $(".animation1").animate({top: "170px",opacity:1},500);
-                                            $(".animation2").animate({top: "250px",opacity:1},1000);
-                                             $(".animation3").animate({top: "170px",opacity:1},1500,function(){
-                                                $(".animation4").fadeIn(1000);
-                                             });
-                                             
-                                     })
-                              }
-                             else{
-                                    $(".animation-img-box").fadeIn(1000)
-                                    $(".animmation-center").fadeOut()
-                                    $(".animation1").animate({top: "-100px",opacity:0},"fast");
-                                    $(".animation2").animate({top: "-100px",opacity:0},"fast");
-                                    $(".animation3").animate({top: "-100px",opacity:0},"fast");
-                                    $('video').get(0).pause();
-                                    $(".animation4").fadeOut()
-                                    //clearTimeout(timer)
-                              }
+                                    clearTimeout(timer);
+                                    timer = setTimeout(function(){
+                                          $.fn.fullpage.moveSectionDown();
+                                    }, 28000);
+                              }else if(index == 4){  
+                                    $(".animation-img-box").fadeOut(4000,function(){
+                                          $(".animmation-center").fadeIn(1000,function(){
+                                                $(".animation1 .shade").animate({top: "-400px"},4000,function(){
+                                                      $(".animation2 .shade").animate({top: "-400px"},4000,function(){
+                                                            $(".animation3 .shade").animate({top: "-400px"},4000,function(){
+                                                                  $(".animation4").fadeIn(1000);
+                                                            });    
+                                                      });
+                                                });     
+                                          });
+                                    });
+                              }else{
+                                          $(".animation-img-box").fadeIn(1000);
+                                          $(".animmation-center").fadeOut();
+                                          $(".animmation-center").find(".shade").stop(true).css("top",0);
+                                          $('video').get(0).pause();
+                                          $(".animation4").fadeOut();
+                                          clearTimeout(timer);
+                                    }
                         },
                         afterRender: function () {
-                              //playing the video
-                             
                               //$.fn.fullpage.setAllowScrolling(false)
                         }
                   });
-                   $(".outer-nav").find("a").on("click",function(){
-                  $("#perspective").removeClass("modalview animate");
+                        $(".outer-nav").find("a").on("click",function(){
+                        $("#perspective").removeClass("modalview animate");
             })
             //手风琴
             $(".accordion").find("li").eq(0).on("click",function() {
                   if ($(this).siblings("li").hasClass("pushRight0")) {
-                        $(this).siblings("li").removeClass("pushRight0")
+                        $(this).siblings("li").removeClass("pushRight0");
                   }else{
-                        $(this).siblings("li").addClass("pushRight0")
+                        $(this).siblings("li").addClass("pushRight0");
                   }           
-            })
-             $(".accordion").find("li").eq(2).on("click",function() {
-                var $this = $(this);
-                if($this.hasClass("left0")){
-                      $this.removeClass("left0");
-                      $this.siblings("li").removeClass("pushLeft0")
-                }else{
+            });
+            $(".accordion").find("li").eq(2).on("click",function() {
+                  var $this = $(this);
+                  if($this.hasClass("left0")){
+                        $this.removeClass("left0");
+                        $this.siblings("li").removeClass("pushLeft0");
+                        $this.children(".owl-btn").removeClass("animated zoomInUp");
+                  }else{
                         $(".fireWorks").fadeIn(1500, function () {
-                            $(this).fadeOut("fast")
-                            $this.addClass("left0");
-                            $this.siblings("li").addClass("pushLeft0")
-                      });   
-                }
-                  
+                            $(this).fadeOut("fast",function(){
+                                    $this.addClass("left0");
+                                    $this.siblings("li").addClass("pushLeft0");
+                                    $this.children(".owl-btn").addClass("animated zoomInUp");
+                              });
+                        });   
+                  }  
             })
             $(".accordion").find("li").eq(1).on("click",function() {
-                  if($(this).hasClass("left0")){
-                        $(this).removeClass("left0");
-                        $(this).siblings("li").eq(0).removeClass("pushLeft0");
-                        $(this).siblings("li").eq(1).removeClass("pushRight0");
-                  }else{
-                        $(this).addClass("left0");
-                        $(this).siblings("li").eq(0).addClass("pushLeft0");
-                        $(this).siblings("li").eq(1).addClass("pushRight0");
-                  }
-                  
-            })
-            // $(".accordion").find("li").eq(0).find("span").on("click",function(event) {
-            //       event.stopPropagation();
-            //       $(this).parent().siblings().removeClass("pushRight0")
-                  
-            // })
-            // $(".accordion").find("li").eq(2).find("span").on("click",function(event) {
-            //        event.stopPropagation();
-            //       $(this).parent("li").removeClass("left0");
-            //       $(this).parent("li").siblings("li").removeClass("pushLeft0")
-                  
-            // })
-            // $(".accordion").find("li").eq(1).find("span").on("click",function(event) {
-            //       event.stopPropagation();
-            //       $(this).parent("li").removeClass("left0");
-            //       $(this).parent("li").siblings("li").eq(0).removeClass("pushLeft0")
-            //       $(this).parent("li").siblings("li").eq(1).removeClass("pushRight0")
-            // })
-            });
-           
-          function fullScreen() {
+                        if($(this).hasClass("left0")){
+                              $(this).removeClass("left0");
+                              $(this).siblings("li").eq(0).removeClass("pushLeft0");
+                              $(this).siblings("li").eq(1).removeClass("pushRight0");
+                        }else{
+                              $(this).addClass("left0");
+                              $(this).siblings("li").eq(0).addClass("pushLeft0");
+                              $(this).siblings("li").eq(1).addClass("pushRight0");
+                        }
+                  });
+            });   
+            function fullScreen() {
                   var el = document.documentElement;
                   var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
                   if (typeof rfs != "undefined" && rfs) {
@@ -273,9 +256,6 @@
                   };
                   return;
             }
-           
-          
       </script>
 </body>
-
 </html>
