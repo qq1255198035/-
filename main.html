@@ -21,14 +21,11 @@
                               </div>
                         </div>
                         <nav class="outer-nav right vertical">
-                              <a href="#page1" class="icon-home">第一屏</a>
-                              <a href="#page2" class="icon-news">第二屏</a>
-                              <a href="#page3" class="icon-image">第三屏</a>
-                              <a href="#page4" class="icon-upload">第四屏</a>
-                             
-                        </nav>
-                        
-                        
+                              <a href="#page1" class="icon-home">Video</a>
+                              <a href="#page2" class="icon-news">Experience the Difference</a>
+                              <a href="#page3" class="icon-image">Find the Owl</a>
+                              <a href="#page4" class="icon-upload">Enter to Win</a>              
+                        </nav>      
                   </div>
             </div>   
             <div class="section" id="section1">
@@ -41,10 +38,10 @@
 			      	</div><!-- wrapper -->
 			      </div><!-- /container -->
 			      <nav class="outer-nav right vertical">
-			      	 <a href="#page1" class="icon-home">第一屏</a>
-                              <a href="#page2" class="icon-news">第二屏</a>
-                              <a href="#page3" class="icon-image">第三屏</a>
-                              <a href="#page4" class="icon-upload">第四屏</a>            
+			      	<a href="#page1" class="icon-home">Video</a>
+			      	<a href="#page2" class="icon-news">Experience the Difference</a>
+			      	<a href="#page3" class="icon-image">Find the Owl</a>
+			      	<a href="#page4" class="icon-upload">Enter to Win</a>                 
                         </nav>
                         <div class="nextPage">
                               <button id="showMenu1"><img src="./img/menu.png" alt=""></button>
@@ -59,10 +56,23 @@
 			      <div class="container">
 			      	<div class="wrapper"> 
                                     <ul class="accordion" id="accordion">
-                                          <li><img src="./img/bg01.png"></li>
-                                          <li><img src="./img/bg02.png"></li>
+                                          <li>
+                                                <img src="./img/bg01.png">
+                                                <div class="content-text">
+                                                      <img src="./img/img01.png" alt="">
+                                                </div>
+                                          </li>
+                                          <li>
+                                                <img src="./img/bg02.png">
+                                                <div class="content-text">
+                                                      <img src="./img/img02.png" alt="">
+                                                </div>
+                                          </li>
                                           <li>
                                                 <img src="./img/bg03.png">
+                                                <div class="content-text">
+                                                      <img src="./img/img03.png" alt="">
+                                                </div>
                                                 <span class="owl-btn">
                                                       
                                                             <img src="./img/car.png" alt="">
@@ -71,24 +81,20 @@
                                                 </span>
                                           </li>
                                           <div class="fireWorks"><img src="./img/fireWorks.png" alt=""></div>
-                                          <div class="nextPage1">
-                                                <a href="#page4"><img src="./img/nextPage.png" alt=""></a>
-                                          </div>
+                                          
                                     </ul>
                               </div>
 			      </div>
 			      <nav class="outer-nav right vertical">
-			      	      <a href="#page1" class="icon-home">第一屏</a>
-                                    <a href="#page2" class="icon-news">第二屏</a>
-                                    <a href="#page3" class="icon-image">第三屏</a>
-                                    <a href="#page4" class="icon-upload">第四屏</a>     
+			      	      <a href="#page1" class="icon-home">Video</a>
+			      	      <a href="#page2" class="icon-news">Experience the Difference</a>
+			      	      <a href="#page3" class="icon-image">Find the Owl</a>
+			      	      <a href="#page4" class="icon-upload">Enter to Win</a>         
                         </nav>
                         <div class="nextPage">
                               <button id="showMenu2"><img src="./img/menu.png" alt=""></button>
                         </div>
-                        <div class="nextPage1">
-                              <a href="#page4"><img src="./img/nextPage.png" alt=""></a>
-                        </div>
+                       
 		      </div>
             </div>
             <div class="section" id="section3">
@@ -120,10 +126,10 @@
 			      	</div><!-- wrapper -->
 			      </div><!-- /container -->
 			      <nav class="outer-nav right vertical">
-			      	 <a href="#page1" class="icon-home">第一屏</a>
-                              <a href="#page2" class="icon-news">第二屏</a>
-                              <a href="#page3" class="icon-image">第三屏</a>
-                              <a href="#page4" class="icon-upload">第四屏</a>
+			      	<a href="#page1" class="icon-home">Video</a>
+			      	<a href="#page2" class="icon-news">Experience the Difference</a>
+			      	<a href="#page3" class="icon-image">Find the Owl</a>
+			      	<a href="#page4" class="icon-upload">Enter to Win</a>         
                              
                         </nav>
                         <div class="nextPage">
@@ -141,10 +147,10 @@
 			      	</div>
 			      </div>
 			      <nav class="outer-nav right vertical">
-			      	 <a href="#page1" class="icon-home">第一屏</a>
-                              <a href="#page2" class="icon-news">第二屏</a>
-                              <a href="#page3" class="icon-image">第三屏</a>
-                              <a href="#page4" class="icon-upload">第四屏</a>
+			      	<a href="#page1" class="icon-home">Video</a>
+			      	<a href="#page2" class="icon-news">Experience the Difference</a>
+			      	<a href="#page3" class="icon-image">Find the Owl</a>
+			      	<a href="#page4" class="icon-upload">Enter to Win</a>         
                              
                         </nav>
                         <div class="nextPage">
@@ -162,15 +168,34 @@
       <script type="text/javascript">
             $(document).ready(function () {
                   var timer;
-                  $(".owl-btn").click(function(e){
-                        e.stopPropagation();
-                        $.fn.fullpage.moveSectionDown();
-                  })
                   $(".animmation-center").fadeOut();
                   $(".animation4").fadeOut();
                   $("body").dblclick(function(){
                         fullScreen();
                   });
+                  $(".outer-nav").find("a").click(function(){
+                        //console.log(1)
+                        $(".perspective").removeClass("modalview animate");
+                        if($(".accordion").find("li").eq(0).siblings("li").eq(0).hasClass("pushRight0") && $(".accordion").find("li").eq(0).siblings("li").eq(1).hasClass("pushRight0")){
+                              $(".accordion").find("li").eq(0).siblings("li").removeClass("pushRight0");
+                              $(".accordion").find("li").eq(0).children(".content-text").fadeIn();
+                              return
+                        }
+                        if($(".accordion").find("li").eq(1).hasClass("left0")){
+                              $(".accordion").find("li").eq(1).removeClass("left0");
+                              $(".accordion").find("li").eq(1).siblings("li").eq(0).removeClass("pushLeft0");
+                              $(".accordion").find("li").eq(1).siblings("li").eq(1).removeClass("pushRight0");
+                              $(".accordion").find("li").eq(1).children(".content-text").fadeIn();
+                              return
+                        }
+                        if($(".accordion").find("li").eq(2).hasClass("left0")){
+                              $(".accordion").find("li").eq(2).removeClass("left0");
+                              $(".accordion").find("li").eq(2).siblings("li").removeClass("pushLeft0");
+                              $(".accordion").find("li").eq(2).children(".owl-btn").removeClass("animated zoomInUp");
+                              $(".accordion").find("li").eq(2).children(".content-text").fadeIn();
+                              return
+                        }
+                  })
                   $(".fireWorks").fadeOut();
                   $('#fullpage').fullpage({
                         verticalCentered: true,
@@ -184,27 +209,29 @@
                                           $.fn.fullpage.moveSectionDown();
                                     }, 28000);
                               }else if(index == 4){  
-                                    $(".animation-img-box").fadeOut(4000,function(){
-                                          $(".animmation-center").fadeIn(1000,function(){
-                                                $(".animation1 .shade").animate({top: "-400px"},4000,function(){
-                                                      $(".animation2 .shade").animate({top: "-400px"},4000,function(){
-                                                            $(".animation3 .shade").animate({top: "-400px"},4000,function(){
+                                    $(".animation-img-box").fadeOut(3000,function(){
+                                          $(".animmation-center").fadeIn("fast",function(){
+                                                $(".animation1 .shade").stop(true,false).animate({top: "-400px"},4000,function(){
+                                                      $(".animation2 .shade").stop(true,false).animate({top: "-400px"},4000,function(){
+                                                            $(".animation3 .shade").stop(true,false).animate({top: "-400px"},4000,function(){
                                                                   $(".animation4").fadeIn(1000);
                                                             });    
                                                       });
                                                 });     
                                           });
                                     });
-                              }else{
-                                          $(".animation-img-box").fadeIn(1000);
-                                          $(".animmation-center").fadeOut();
-                                          $(".animmation-center").find(".shade").stop(true).css("top",0);
+                                    }else{
+                                          $(".animation-img-box").fadeIn(1500);
+                                          $(".animmation-center").fadeOut(100);
+							$(".animmation-center > div").find(".shade").stop(true,false).css("top",0);
                                           $('video').get(0).pause();
                                           $(".animation4").fadeOut();
                                           clearTimeout(timer);
+                                         
                                     }
                         },
                         afterRender: function () {
+
                               //$.fn.fullpage.setAllowScrolling(false)
                         }
                   });
@@ -215,8 +242,10 @@
             $(".accordion").find("li").eq(0).on("click",function() {
                   if ($(this).siblings("li").hasClass("pushRight0")) {
                         $(this).siblings("li").removeClass("pushRight0");
+                        $(this).children(".content-text").fadeIn();
                   }else{
                         $(this).siblings("li").addClass("pushRight0");
+                        $(this).children(".content-text").fadeOut();
                   }           
             });
             $(".accordion").find("li").eq(2).on("click",function() {
@@ -225,12 +254,14 @@
                         $this.removeClass("left0");
                         $this.siblings("li").removeClass("pushLeft0");
                         $this.children(".owl-btn").removeClass("animated zoomInUp");
+                        $this.children(".content-text").fadeIn();
                   }else{
                         $(".fireWorks").fadeIn(1500, function () {
                             $(this).fadeOut("fast",function(){
                                     $this.addClass("left0");
                                     $this.siblings("li").addClass("pushLeft0");
                                     $this.children(".owl-btn").addClass("animated zoomInUp");
+                                    $this.children(".content-text").fadeOut();
                               });
                         });   
                   }  
@@ -240,10 +271,12 @@
                               $(this).removeClass("left0");
                               $(this).siblings("li").eq(0).removeClass("pushLeft0");
                               $(this).siblings("li").eq(1).removeClass("pushRight0");
+                              $(this).children(".content-text").fadeIn();
                         }else{
                               $(this).addClass("left0");
                               $(this).siblings("li").eq(0).addClass("pushLeft0");
                               $(this).siblings("li").eq(1).addClass("pushRight0");
+                              $(this).children(".content-text").fadeOut();
                         }
                   });
             });   
