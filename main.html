@@ -5,7 +5,7 @@
       <title>动画</title>
       <link rel="stylesheet" type="text/css" href="./lib/fullPage/jquery.fullPage.css" />
       <link rel="stylesheet" href="./css/component.css">
-      <!-- <link rel="stylesheet" href="./css/demo.css"> -->
+     
       <link rel="stylesheet" href="./css/animate.min.css">
       <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -168,6 +168,10 @@
       <script type="text/javascript">
             $(document).ready(function () {
                   var timer;
+                   $(".owl-btn").click(function (e) {
+                        e.stopPropagation();
+                        $.fn.fullpage.moveSectionDown();
+                  })
                   $(".animmation-center").fadeOut();
                   $(".animation4").fadeOut();
                   $("body").dblclick(function(){
@@ -232,7 +236,7 @@
                         },
                         afterRender: function () {
 
-                              //$.fn.fullpage.setAllowScrolling(false)
+                              $.fn.fullpage.setAllowScrolling(false)
                         }
                   });
                         $(".outer-nav").find("a").on("click",function(){
